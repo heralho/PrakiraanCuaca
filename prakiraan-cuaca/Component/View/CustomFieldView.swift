@@ -9,15 +9,30 @@ import SwiftUI
 
 struct CustomFieldView: View {
     let title: String
-    @State private var text: String = ""
+    let placeholder: String
+    @Binding var text: String
+    var keyboardType: UIKeyboardType = .default
     
     var body: some View {
-        HStack {
-            TextField(title, text: $text)
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text(title)
+                    .font(.title)
+            }.padding(.horizontal)
+            HStack {
+                TextField(placeholder, text: $text)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.body)
+                    .frame(height: 44)
+                    .cornerRadius(8)
+                    .disableAutocorrection(true)
+            }.padding(8)
         }
     }
 }
 
 #Preview {
-    CustomFieldView(title: "ahay")
+    CustomFieldView(title: "Title",
+                    placeholder: "Placeholder",
+                    text: .constant(""))
 }
