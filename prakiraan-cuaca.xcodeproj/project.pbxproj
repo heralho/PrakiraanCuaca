@@ -21,6 +21,9 @@
 		8E5A05172E98EE7600590CDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05162E98EE7600590CDB /* MainView.swift */; };
 		8E5A05192E98EE8400590CDB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05182E98EE8000590CDB /* DetailViewModel.swift */; };
 		8E5A051B2E98EE9200590CDB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A051A2E98EE9200590CDB /* DetailView.swift */; };
+		8E5A051F2E98F54300590CDB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A051E2E98F53E00590CDB /* Navigator.swift */; };
+		8E5A05212E98F7D500590CDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05202E98F7D200590CDB /* ContentView.swift */; };
+		8E5A05232E98F8E100590CDB /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05222E98F8D800590CDB /* CustomBackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		8E5A05162E98EE7600590CDB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8E5A05182E98EE8000590CDB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		8E5A051A2E98EE9200590CDB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8E5A051E2E98F53E00590CDB /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		8E5A05202E98F7D200590CDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8E5A05222E98F8D800590CDB /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		8EDB496B2E98995D001D8733 /* prakiraan-cuaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "prakiraan-cuaca.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB497B2E98995F001D8733 /* prakiraan-cuacaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prakiraan-cuacaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB49852E98995F001D8733 /* prakiraan-cuacaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prakiraan-cuacaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +107,8 @@
 		8E5A04F52E989AFB00590CDB /* prakiraan-cuaca */ = {
 			isa = PBXGroup;
 			children = (
+				8E5A05202E98F7D200590CDB /* ContentView.swift */,
+				8E5A051C2E98F05E00590CDB /* Component */,
 				8E5A05092E98B74E00590CDB /* Constant */,
 				8E5A05012E98B18000590CDB /* API */,
 				8E5A04FA2E989B1500590CDB /* Manager */,
@@ -123,7 +131,7 @@
 		8E5A04FA2E989B1500590CDB /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				8E5A04FC2E989B6600590CDB /* UrlSession */,
+				8E5A04FC2E989B6600590CDB /* Networking */,
 				8E5A04FB2E989B6100590CDB /* Router */,
 			);
 			path = Manager;
@@ -132,18 +140,19 @@
 		8E5A04FB2E989B6100590CDB /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				8E5A051E2E98F53E00590CDB /* Navigator.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
-		8E5A04FC2E989B6600590CDB /* UrlSession */ = {
+		8E5A04FC2E989B6600590CDB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				8E5A04FD2E989C2C00590CDB /* UrlSessionManager.swift */,
 				8E5A05062E98B50A00590CDB /* Method.swift */,
 				8E5A04FF2E98A1E100590CDB /* Errors.swift */,
 			);
-			path = UrlSession;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		8E5A05012E98B18000590CDB /* API */ = {
@@ -166,9 +175,9 @@
 		8E5A050C2E98B8EA00590CDB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				8E5A05112E98B95100590CDB /* Model */,
 				8E5A05162E98EE7600590CDB /* MainView.swift */,
 				8E5A05142E98EE5F00590CDB /* MainViewModel.swift */,
-				8E5A05112E98B95100590CDB /* Model */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -176,9 +185,9 @@
 		8E5A050D2E98B8F000590CDB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8E5A050E2E98B8F400590CDB /* Model */,
 				8E5A051A2E98EE9200590CDB /* DetailView.swift */,
 				8E5A05182E98EE8000590CDB /* DetailViewModel.swift */,
-				8E5A050E2E98B8F400590CDB /* Model */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -197,6 +206,22 @@
 				8E5A05122E98BBC500590CDB /* AreaModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8E5A051C2E98F05E00590CDB /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A051D2E98F06400590CDB /* View */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8E5A051D2E98F06400590CDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A05222E98F8D800590CDB /* CustomBackButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8EDB49622E98995D001D8733 = {
@@ -368,9 +393,12 @@
 				8E5A050B2E98B77600590CDB /* Constant.swift in Sources */,
 				8E5A04F82E989AFB00590CDB /* prakiraan_cuacaApp.swift in Sources */,
 				8E5A05152E98EE6200590CDB /* MainViewModel.swift in Sources */,
+				8E5A051F2E98F54300590CDB /* Navigator.swift in Sources */,
 				8E5A051B2E98EE9200590CDB /* DetailView.swift in Sources */,
+				8E5A05232E98F8E100590CDB /* CustomBackButton.swift in Sources */,
 				8E5A05192E98EE8400590CDB /* DetailViewModel.swift in Sources */,
 				8E5A05172E98EE7600590CDB /* MainView.swift in Sources */,
+				8E5A05212E98F7D500590CDB /* ContentView.swift in Sources */,
 				8E5A05132E98BBC800590CDB /* AreaModel.swift in Sources */,
 				8E5A05072E98B51000590CDB /* Method.swift in Sources */,
 				8E5A04FE2E989C2C00590CDB /* UrlSessionManager.swift in Sources */,
