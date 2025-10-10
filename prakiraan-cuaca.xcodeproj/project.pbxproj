@@ -24,6 +24,7 @@
 		8E5A051F2E98F54300590CDB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A051E2E98F53E00590CDB /* Navigator.swift */; };
 		8E5A05212E98F7D500590CDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05202E98F7D200590CDB /* ContentView.swift */; };
 		8E5A05232E98F8E100590CDB /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05222E98F8D800590CDB /* CustomBackButton.swift */; };
+		8E5A05312E99033F00590CDB /* CustomFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05302E99033F00590CDB /* CustomFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		8E5A051E2E98F53E00590CDB /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		8E5A05202E98F7D200590CDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E5A05222E98F8D800590CDB /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		8E5A05302E99033F00590CDB /* CustomFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldView.swift; sourceTree = "<group>"; };
 		8EDB496B2E98995D001D8733 /* prakiraan-cuaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "prakiraan-cuaca.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB497B2E98995F001D8733 /* prakiraan-cuacaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prakiraan-cuacaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB49852E98995F001D8733 /* prakiraan-cuacaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prakiraan-cuacaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				8E5A05222E98F8D800590CDB /* CustomBackButton.swift */,
+				8E5A05302E99033F00590CDB /* CustomFieldView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				8E5A05232E98F8E100590CDB /* CustomBackButton.swift in Sources */,
 				8E5A05192E98EE8400590CDB /* DetailViewModel.swift in Sources */,
 				8E5A05172E98EE7600590CDB /* MainView.swift in Sources */,
+				8E5A05312E99033F00590CDB /* CustomFieldView.swift in Sources */,
 				8E5A05212E98F7D500590CDB /* ContentView.swift in Sources */,
 				8E5A05132E98BBC800590CDB /* AreaModel.swift in Sources */,
 				8E5A05072E98B51000590CDB /* Method.swift in Sources */,
@@ -561,7 +565,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"prakiraan-cuaca/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -589,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"prakiraan-cuaca/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
