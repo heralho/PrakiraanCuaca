@@ -6,6 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8E5A04F62E989AFB00590CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5A04F22E989AFB00590CDB /* Assets.xcassets */; };
+		8E5A04F82E989AFB00590CDB /* prakiraan_cuacaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A04F42E989AFB00590CDB /* prakiraan_cuacaApp.swift */; };
+		8E5A04FE2E989C2C00590CDB /* UrlSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A04FD2E989C2C00590CDB /* UrlSessionManager.swift */; };
+		8E5A05002E98A1E500590CDB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A04FF2E98A1E100590CDB /* Errors.swift */; };
+		8E5A05032E98B19C00590CDB /* BMKGAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05022E98B18800590CDB /* BMKGAPI.swift */; };
+		8E5A05052E98B20800590CDB /* AreaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05042E98B1FF00590CDB /* AreaAPI.swift */; };
+		8E5A05072E98B51000590CDB /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05062E98B50A00590CDB /* Method.swift */; };
+		8E5A050B2E98B77600590CDB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A050A2E98B76500590CDB /* Constant.swift */; };
+		8E5A05102E98B90400590CDB /* BMKGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A050F2E98B90100590CDB /* BMKGModel.swift */; };
+		8E5A05132E98BBC800590CDB /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05122E98BBC500590CDB /* AreaModel.swift */; };
+		8E5A05152E98EE6200590CDB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05142E98EE5F00590CDB /* MainViewModel.swift */; };
+		8E5A05172E98EE7600590CDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05162E98EE7600590CDB /* MainView.swift */; };
+		8E5A05192E98EE8400590CDB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A05182E98EE8000590CDB /* DetailViewModel.swift */; };
+		8E5A051B2E98EE9200590CDB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A051A2E98EE9200590CDB /* DetailView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8EDB497C2E98995F001D8733 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,17 +41,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E5A04F22E989AFB00590CDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E5A04F42E989AFB00590CDB /* prakiraan_cuacaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prakiraan_cuacaApp.swift; sourceTree = "<group>"; };
+		8E5A04FD2E989C2C00590CDB /* UrlSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionManager.swift; sourceTree = "<group>"; };
+		8E5A04FF2E98A1E100590CDB /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		8E5A05022E98B18800590CDB /* BMKGAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMKGAPI.swift; sourceTree = "<group>"; };
+		8E5A05042E98B1FF00590CDB /* AreaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaAPI.swift; sourceTree = "<group>"; };
+		8E5A05062E98B50A00590CDB /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		8E5A050A2E98B76500590CDB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		8E5A050F2E98B90100590CDB /* BMKGModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMKGModel.swift; sourceTree = "<group>"; };
+		8E5A05122E98BBC500590CDB /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
+		8E5A05142E98EE5F00590CDB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8E5A05162E98EE7600590CDB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8E5A05182E98EE8000590CDB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		8E5A051A2E98EE9200590CDB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		8EDB496B2E98995D001D8733 /* prakiraan-cuaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "prakiraan-cuaca.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB497B2E98995F001D8733 /* prakiraan-cuacaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prakiraan-cuacaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB49852E98995F001D8733 /* prakiraan-cuacaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prakiraan-cuacaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8EDB496D2E98995D001D8733 /* prakiraan-cuaca */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "prakiraan-cuaca";
-			sourceTree = "<group>";
-		};
 		8EDB497E2E98995F001D8733 /* prakiraan-cuacaTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "prakiraan-cuacaTests";
@@ -72,10 +98,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E5A04F52E989AFB00590CDB /* prakiraan-cuaca */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A05092E98B74E00590CDB /* Constant */,
+				8E5A05012E98B18000590CDB /* API */,
+				8E5A04FA2E989B1500590CDB /* Manager */,
+				8E5A04F92E989B0000590CDB /* Module */,
+				8E5A04F22E989AFB00590CDB /* Assets.xcassets */,
+				8E5A04F42E989AFB00590CDB /* prakiraan_cuacaApp.swift */,
+			);
+			path = "prakiraan-cuaca";
+			sourceTree = "<group>";
+		};
+		8E5A04F92E989B0000590CDB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A050D2E98B8F000590CDB /* Detail */,
+				8E5A050C2E98B8EA00590CDB /* Main */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8E5A04FA2E989B1500590CDB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A04FC2E989B6600590CDB /* UrlSession */,
+				8E5A04FB2E989B6100590CDB /* Router */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8E5A04FB2E989B6100590CDB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8E5A04FC2E989B6600590CDB /* UrlSession */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A04FD2E989C2C00590CDB /* UrlSessionManager.swift */,
+				8E5A05062E98B50A00590CDB /* Method.swift */,
+				8E5A04FF2E98A1E100590CDB /* Errors.swift */,
+			);
+			path = UrlSession;
+			sourceTree = "<group>";
+		};
+		8E5A05012E98B18000590CDB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A05042E98B1FF00590CDB /* AreaAPI.swift */,
+				8E5A05022E98B18800590CDB /* BMKGAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8E5A05092E98B74E00590CDB /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A050A2E98B76500590CDB /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		8E5A050C2E98B8EA00590CDB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A05162E98EE7600590CDB /* MainView.swift */,
+				8E5A05142E98EE5F00590CDB /* MainViewModel.swift */,
+				8E5A05112E98B95100590CDB /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8E5A050D2E98B8F000590CDB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A051A2E98EE9200590CDB /* DetailView.swift */,
+				8E5A05182E98EE8000590CDB /* DetailViewModel.swift */,
+				8E5A050E2E98B8F400590CDB /* Model */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8E5A050E2E98B8F400590CDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A050F2E98B90100590CDB /* BMKGModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E5A05112E98B95100590CDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A05122E98BBC500590CDB /* AreaModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8EDB49622E98995D001D8733 = {
 			isa = PBXGroup;
 			children = (
-				8EDB496D2E98995D001D8733 /* prakiraan-cuaca */,
+				8E5A04F52E989AFB00590CDB /* prakiraan-cuaca */,
 				8EDB497E2E98995F001D8733 /* prakiraan-cuacaTests */,
 				8EDB49882E98995F001D8733 /* prakiraan-cuacaUITests */,
 				8EDB496C2E98995D001D8733 /* Products */,
@@ -106,9 +233,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				8EDB496D2E98995D001D8733 /* prakiraan-cuaca */,
 			);
 			name = "prakiraan-cuaca";
 			packageProductDependencies = (
@@ -212,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5A04F62E989AFB00590CDB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +361,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5A05032E98B19C00590CDB /* BMKGAPI.swift in Sources */,
+				8E5A05052E98B20800590CDB /* AreaAPI.swift in Sources */,
+				8E5A05002E98A1E500590CDB /* Errors.swift in Sources */,
+				8E5A05102E98B90400590CDB /* BMKGModel.swift in Sources */,
+				8E5A050B2E98B77600590CDB /* Constant.swift in Sources */,
+				8E5A04F82E989AFB00590CDB /* prakiraan_cuacaApp.swift in Sources */,
+				8E5A05152E98EE6200590CDB /* MainViewModel.swift in Sources */,
+				8E5A051B2E98EE9200590CDB /* DetailView.swift in Sources */,
+				8E5A05192E98EE8400590CDB /* DetailViewModel.swift in Sources */,
+				8E5A05172E98EE7600590CDB /* MainView.swift in Sources */,
+				8E5A05132E98BBC800590CDB /* AreaModel.swift in Sources */,
+				8E5A05072E98B51000590CDB /* Method.swift in Sources */,
+				8E5A04FE2E989C2C00590CDB /* UrlSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
