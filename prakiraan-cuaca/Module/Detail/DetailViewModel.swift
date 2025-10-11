@@ -5,3 +5,34 @@
 //  Created by Heraldy Dwifany on 10/10/25.
 //
 
+import Foundation
+
+extension DetailView {
+    
+    @Observable
+    class DetailViewModel {
+        
+        private let api: IBMKGAPI = BMKGAPI.shared
+        private var weatherData: [BMKGData] = []
+        
+        func fetchData(_ adm4: String) async {
+            do {
+                let result = try await api.fetchBMKGData(data: BMKGRequestData(adm4: adm4))
+                switch result {
+                case .success(let success):
+                    weatherData = success?.data ?? []
+                case .failure(let failure):
+                    print(failure)
+                }
+            } catch {
+                print(error)
+            }
+        }
+        
+        func getWeatherData() -> [BMKGData] {
+            return weatherData
+        }
+    }
+}
+
+

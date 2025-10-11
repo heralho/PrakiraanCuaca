@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88EA9D702E99FBFB007B7CA3 /* CellBubleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA9D6F2E99FBFB007B7CA3 /* CellBubleView.swift */; };
 		8E5A04F62E989AFB00590CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5A04F22E989AFB00590CDB /* Assets.xcassets */; };
 		8E5A04F82E989AFB00590CDB /* prakiraan_cuacaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A04F42E989AFB00590CDB /* prakiraan_cuacaApp.swift */; };
 		8E5A04FE2E989C2C00590CDB /* UrlSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A04FD2E989C2C00590CDB /* UrlSessionManager.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88EA9D6F2E99FBFB007B7CA3 /* CellBubleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBubleView.swift; sourceTree = "<group>"; };
 		8E5A04F22E989AFB00590CDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E5A04F42E989AFB00590CDB /* prakiraan_cuacaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prakiraan_cuacaApp.swift; sourceTree = "<group>"; };
 		8E5A04FD2E989C2C00590CDB /* UrlSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionManager.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				8E5A05222E98F8D800590CDB /* CustomBackButton.swift */,
 				8E5A05302E99033F00590CDB /* CustomFieldView.swift */,
+				88EA9D6F2E99FBFB007B7CA3 /* CellBubleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				8E5A05032E98B19C00590CDB /* BMKGAPI.swift in Sources */,
 				8E5A05052E98B20800590CDB /* AreaAPI.swift in Sources */,
 				8E5A05002E98A1E500590CDB /* Errors.swift in Sources */,
+				88EA9D702E99FBFB007B7CA3 /* CellBubleView.swift in Sources */,
 				8E5A05102E98B90400590CDB /* BMKGModel.swift in Sources */,
 				8E5A050B2E98B77600590CDB /* Constant.swift in Sources */,
 				8E5A04F82E989AFB00590CDB /* prakiraan_cuacaApp.swift in Sources */,

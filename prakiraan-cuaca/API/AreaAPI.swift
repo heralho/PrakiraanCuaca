@@ -13,6 +13,9 @@ protocol IAreaAPI {
 }
 
 class AreaAPI: IAreaAPI {
+    
+    static let shared = AreaAPI()
+    
     func getProvince() async throws -> Result<ProvinceResponseModel?, Error> {
         return try await UrlSessionManager.shared.fetchUrl(method: .get, url: Constant.AreaUrl + "provinces.json")
     }
@@ -22,7 +25,7 @@ class AreaAPI: IAreaAPI {
             return .failure(Errors(code: nil, message: "Province not available"))
         }
         
-        return try await UrlSessionManager.shared.fetchUrl(method: .get, url: Constant.AreaUrl + "\(provinceCode).json")
+        return try await UrlSessionManager.shared.fetchUrl(method: .get, url: Constant.AreaUrl + "regencies/" + "\(provinceCode).json")
     }
     
     func getDistrict(data: DistrictRequestModel) async throws -> Result<DistrictResponseModel?, Error> {
@@ -30,7 +33,7 @@ class AreaAPI: IAreaAPI {
             return .failure(Errors(code: nil, message: "City not available"))
         }
         
-        return try await UrlSessionManager.shared.fetchUrl(method: .get, url: Constant.AreaUrl + "\(cityCode).json")
+        return try await UrlSessionManager.shared.fetchUrl(method: .get, url: Constant.AreaUrl + "districts/" + "\(cityCode).json")
     }
     
     func getSubdistrict(data: SubdistrictRequestModel) async throws -> Result<SubdistrictResponseModel?, Error> {
@@ -38,6 +41,6 @@ class AreaAPI: IAreaAPI {
             return .failure(Errors(code: nil, message: "District not available"))
         }
         
-        return try await UrlSessionManager.shared.fetchUrl(method: .get, url: Constant.AreaUrl + "\(districtCode).json")
+        return try await UrlSessionManager.shared.fetchUrl(method: .get, url: Constant.AreaUrl + "villages/" + "\(districtCode).json")
     }
 }

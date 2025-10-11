@@ -30,9 +30,16 @@ class UrlSessionManager: IUrlSessionManager {
        
         let (data, response) = try await URLSession.shared.data(for: request)
         
-        guard let _ = response as? HTTPURLResponse else {
+        guard let httpUrlResponse = response as? HTTPURLResponse else {
             return .failure(Errors(code: nil, message: "Invalid response"))
         }
+        
+        print("===============================")
+        print(httpUrlResponse.allHeaderFields)
+        print("===============================")
+        print(String(data: data, encoding: .utf8) ?? "")
+        print("===============================")
+        
         
         do {
             let parsedData = try JSONDecoder().decode(T.self, from: data)

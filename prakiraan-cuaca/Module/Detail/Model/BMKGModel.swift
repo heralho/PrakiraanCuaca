@@ -30,18 +30,18 @@ struct BMKGData: Codable {
 // MARK: - Weather
 struct Weather: Codable {
     let datetime: String?
-    let t: Int?
-    let tcc: Int?
-    let tp: Int?
-    let weather: Int?
+    let t: Double?
+    let tcc: Double?
+    let tp: Double?
+    let weather: Double?
     let weatherDesc: String?
     let weatherDescEn: String?
-    let wdDeg: Int?
+    let wdDeg: Double?
     let wd: String?
     let wdTo: String?
     let ws: Double?
-    let hu: Int?
-    let vs: Int?
+    let hu: Double?
+    let vs: Double?
     let vsText: String?
     let timeIndex: String?
     let analysisDate: String?

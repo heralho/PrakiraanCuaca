@@ -15,7 +15,6 @@ struct ContentView: View {
             navigator.startingPath.view()
                 .environmentObject(navigator)
                 .navigationBarBackButtonHidden(true)
-                .padding()
                 .navigationDestination(for: Routes.self) { route in
                     route.view()
                         .environmentObject(navigator)

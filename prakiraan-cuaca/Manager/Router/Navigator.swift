@@ -18,7 +18,7 @@ enum Routes: Hashable{
         case .main:
             MainView()
         case .detail(let adm4):
-            DetailView()
+            DetailView(adm4: adm4)
         }
     }
 }

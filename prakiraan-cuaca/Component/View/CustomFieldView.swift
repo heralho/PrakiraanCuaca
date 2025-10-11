@@ -14,10 +14,11 @@ struct CustomFieldView: View {
     var keyboardType: UIKeyboardType = .default
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: 0) {
             HStack {
                 Text(title)
-                    .font(.title)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
             }.padding(.horizontal)
             HStack {
                 TextField(placeholder, text: $text)
@@ -26,7 +27,7 @@ struct CustomFieldView: View {
                     .frame(height: 44)
                     .cornerRadius(8)
                     .disableAutocorrection(true)
-            }.padding(8)
+            }.padding(.horizontal, 16)
         }
     }
 }

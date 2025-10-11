@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct DetailView: View {
+    let adm4: String
+    
+    @State private var viewModel: DetailViewModel = DetailViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(adm4)
+            .onAppear {
+                print(adm4)
+            }
+            .task {
+                do {
+                    await viewModel.fetchData(adm4)
+                }
+            }
     }
 }
 
 #Preview {
-    DetailView()
+    DetailView(adm4: "")
 }
