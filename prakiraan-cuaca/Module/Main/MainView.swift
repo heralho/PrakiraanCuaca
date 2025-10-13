@@ -124,11 +124,12 @@ struct MainView: View {
                                 .foregroundColor(.white)
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                                 .frame(height: 44)
-                                .background(Color.cyan.opacity(50))
+                                .background(Color.blueSpray)
                                 .cornerRadius(8)
                         }
                         .buttonStyle(PlainButtonStyle())
-                        .padding(.horizontal, 16)// Optional: Remove default button styling
+                        .padding(.horizontal, 16)
+                        .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 0)
                     }
                     .transition(AnyTransition.opacity.animation(.linear(duration: 0.2)))
                 }

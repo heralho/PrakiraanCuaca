@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		886C680F2E9CADC40005D605 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C680E2E9CADBA0005D605 /* Color+Extensions.swift */; };
+		886C68112E9CADF60005D605 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C68102E9CADF30005D605 /* Color.swift */; };
 		88EA9D702E99FBFB007B7CA3 /* CellBubleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA9D6F2E99FBFB007B7CA3 /* CellBubleView.swift */; };
 		8E5A04F62E989AFB00590CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5A04F22E989AFB00590CDB /* Assets.xcassets */; };
 		8E5A04F82E989AFB00590CDB /* prakiraan_cuacaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A04F42E989AFB00590CDB /* prakiraan_cuacaApp.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		886C680E2E9CADBA0005D605 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		886C68102E9CADF30005D605 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		88EA9D6F2E99FBFB007B7CA3 /* CellBubleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBubleView.swift; sourceTree = "<group>"; };
 		8E5A04F22E989AFB00590CDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E5A04F42E989AFB00590CDB /* prakiraan_cuacaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prakiraan_cuacaApp.swift; sourceTree = "<group>"; };
@@ -108,9 +112,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		886C680D2E9CADB30005D605 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				886C680E2E9CADBA0005D605 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8E5A04F52E989AFB00590CDB /* prakiraan-cuaca */ = {
 			isa = PBXGroup;
 			children = (
+				886C680D2E9CADB30005D605 /* Extensions */,
 				8E5A05202E98F7D200590CDB /* ContentView.swift */,
 				8E5A051C2E98F05E00590CDB /* Component */,
 				8E5A05092E98B74E00590CDB /* Constant */,
@@ -171,6 +184,7 @@
 		8E5A05092E98B74E00590CDB /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				886C68102E9CADF30005D605 /* Color.swift */,
 				8E5A050A2E98B76500590CDB /* Constant.swift */,
 			);
 			path = Constant;
@@ -405,9 +419,11 @@
 				8E5A05232E98F8E100590CDB /* CustomBackButton.swift in Sources */,
 				8E5A05192E98EE8400590CDB /* DetailViewModel.swift in Sources */,
 				8E5A05172E98EE7600590CDB /* MainView.swift in Sources */,
+				886C68112E9CADF60005D605 /* Color.swift in Sources */,
 				8E5A05312E99033F00590CDB /* CustomFieldView.swift in Sources */,
 				8E5A05212E98F7D500590CDB /* ContentView.swift in Sources */,
 				8E5A05132E98BBC800590CDB /* AreaModel.swift in Sources */,
+				886C680F2E9CADC40005D605 /* Color+Extensions.swift in Sources */,
 				8E5A05072E98B51000590CDB /* Method.swift in Sources */,
 				8E5A04FE2E989C2C00590CDB /* UrlSessionManager.swift in Sources */,
 			);

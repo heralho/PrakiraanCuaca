@@ -12,6 +12,7 @@ struct CellBubleView: View {
     let id: String
     let isSelected: Bool
     var action: ((String)->Void)?
+    
     var body: some View {
         ZStack {
             Button {
@@ -21,12 +22,15 @@ struct CellBubleView: View {
                     Text(title)
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(isSelected ? Color.white : Color.black.opacity(0.6))
                 }
                 .padding(16)
-                .background(isSelected ? Color.cyan.opacity(0.4) : Color.cyan.opacity(0.2))
+                .background(isSelected ? Color.blueSpray : Color.blueFrenchPass)
                 .cornerRadius(8)
             }
+            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 0)
+            .padding(.horizontal, 4)
+            .padding(.vertical, 8)
         }
     }
 }
@@ -35,6 +39,6 @@ struct CellBubleView: View {
     ScrollView(.horizontal) {
         HStack {
             CellBubleView(title: "Aceh", id: "1", isSelected: false, action: nil)
-        }.padding(.horizontal, 16)
+        }
     }
 }

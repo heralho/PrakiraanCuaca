@@ -7,9 +7,29 @@
 import SwiftUI
 
 @MainActor
+protocol MainViewModelType {
+    var filter: String { get }
+    func fetchData() async
+    func setSelectedProvince(_ province: String) async
+    func setSelectedCity(_ city: String) async
+    func setSelectedDistrict(_ district: String) async
+    func setSelectedSubdistrict(_ subdistrict: String) async
+    func getProvinceData() -> [AreaDataItem]
+    func getCityData() -> [AreaDataItem]
+    func getDistrictData() -> [AreaDataItem]
+    func getSubdistrictData() -> [AreaDataItem]
+    func getSelectedProvince() -> String
+    func getSelectedCity() -> String
+    func getSelectedDistrict() -> String
+    func getSelectedSubdistrict() -> String
+    func showCity() -> Bool
+    func showDistrict() -> Bool
+    func showSubdistrict() -> Bool
+}
+
 @Observable
-class MainViewModel {
-    private let api: IAreaAPI = AreaAPI.shared
+class MainViewModel: MainViewModelType {
+    var api: IAreaAPI = AreaAPI.shared
 
     private var province: [AreaDataItem] = [AreaDataItem]()
     private var city: [AreaDataItem] = [AreaDataItem]()

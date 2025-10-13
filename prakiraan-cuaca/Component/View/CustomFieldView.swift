@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CustomFieldView: View {
     let title: String
+    var titleColor: Color = Color.black
     let placeholder: String
     @Binding var text: String
     var keyboardType: UIKeyboardType = .default
+    var backgroundColor: Color = Color.clear
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -19,6 +21,7 @@ struct CustomFieldView: View {
                 Text(title)
                     .font(.subheadline)
                     .fontWeight(.semibold)
+                    .foregroundColor(titleColor)
             }.padding(.horizontal)
             HStack {
                 TextField(placeholder, text: $text)
@@ -29,11 +32,14 @@ struct CustomFieldView: View {
                     .disableAutocorrection(true)
             }.padding(.horizontal, 16)
         }
+        .background(backgroundColor)
     }
 }
 
 #Preview {
     CustomFieldView(title: "Title",
+                    titleColor: Color.white,
                     placeholder: "Placeholder",
-                    text: .constant(""))
+                    text: .constant(""),
+                    backgroundColor: Color.blueFrenchPass)
 }
