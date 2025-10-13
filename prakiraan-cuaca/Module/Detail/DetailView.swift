@@ -13,15 +13,17 @@ struct DetailView: View {
     @State private var viewModel: DetailViewModel = DetailViewModel()
     
     var body: some View {
-        Text(adm4)
-            .onAppear {
-                print(adm4)
+        ScrollView(.horizontal) {
+            VStack {
+                Color.blueFrenchPass
             }
-            .task {
-                do {
-                    await viewModel.fetchData(adm4)
-                }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .task {
+            do {
+                await viewModel.fetchData(adm4)
             }
+        }
     }
 }
 

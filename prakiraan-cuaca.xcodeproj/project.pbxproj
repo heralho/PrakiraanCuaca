@@ -124,13 +124,13 @@
 			isa = PBXGroup;
 			children = (
 				886C680D2E9CADB30005D605 /* Extensions */,
-				8E5A05202E98F7D200590CDB /* ContentView.swift */,
 				8E5A051C2E98F05E00590CDB /* Component */,
 				8E5A05092E98B74E00590CDB /* Constant */,
 				8E5A05012E98B18000590CDB /* API */,
 				8E5A04FA2E989B1500590CDB /* Manager */,
 				8E5A04F92E989B0000590CDB /* Module */,
 				8E5A04F22E989AFB00590CDB /* Assets.xcassets */,
+				8E5A05202E98F7D200590CDB /* ContentView.swift */,
 				8E5A04F42E989AFB00590CDB /* prakiraan_cuacaApp.swift */,
 			);
 			path = "prakiraan-cuaca";

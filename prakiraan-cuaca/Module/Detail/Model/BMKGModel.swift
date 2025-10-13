@@ -18,7 +18,7 @@ struct BMKGData: Codable {
     let location: Location?
     private let cuaca: [[Weather]]?
     var weather: [Weather]? {
-        return cuaca?.first
+        return cuaca?.flatMap({$0})
     }
     
     enum CodingKeys: String, CodingKey {

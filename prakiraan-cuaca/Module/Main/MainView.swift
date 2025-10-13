@@ -19,7 +19,7 @@ struct MainView: View {
                                 placeholder: "Ketik provinsi di sini",
                                 text: $viewModel.filter)
                 ScrollView(.horizontal) {
-                    HStack {
+                    LazyHStack {
                         ForEach(viewModel.getProvinceData(), id: \.code) { data in
                             CellBubleView(title: data.name ?? "",
                                           id: data.code ?? "",
@@ -43,7 +43,7 @@ struct MainView: View {
                             .fontWeight(.semibold)
                             .padding(.horizontal, 16)
                         ScrollView(.horizontal) {
-                            HStack {
+                            LazyHStack {
                                 ForEach(viewModel.getCityData(), id: \.code) { data in
                                     CellBubleView(title: data.name ?? "",
                                                   id: data.code ?? "",
@@ -69,7 +69,7 @@ struct MainView: View {
                             .fontWeight(.semibold)
                             .padding(.horizontal, 16)
                         ScrollView(.horizontal) {
-                            HStack {
+                            LazyHStack {
                                 ForEach(viewModel.getDistrictData(), id: \.code) { data in
                                     CellBubleView(title: data.name ?? "",
                                                   id: data.code ?? "",
@@ -94,7 +94,7 @@ struct MainView: View {
                             .fontWeight(.semibold)
                             .padding(.horizontal, 16)
                         ScrollView(.horizontal) {
-                            HStack {
+                            LazyHStack {
                                 ForEach(viewModel.getSubdistrictData(), id: \.code) { data in
                                     CellBubleView(title: data.name ?? "",
                                                   id: data.code ?? "",
