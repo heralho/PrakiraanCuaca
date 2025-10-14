@@ -11,8 +11,8 @@ struct CustomBackButton: View {
     @EnvironmentObject var navigator: Navigator
 
     var body: some View {
-        HStack {
-            Image(systemName: "arrowshape.backward.fill")
+        HStack(spacing: 2) {
+            Image(systemName: "chevron.left")
             Text("Back")
         }
         .onTapGesture {
@@ -20,3 +20,7 @@ struct CustomBackButton: View {
         }
     }
 }
+
+//#Preview {
+//    CustomBackButton()
+//}

@@ -14,11 +14,19 @@ struct DetailView: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            VStack {
-                Color.blueFrenchPass
+            LazyHStack(spacing: .zero) {
+                ForEach(viewModel.getWeatherData(), id: \.datetime) { data in
+                    VStack {
+                        WeatherCardView(data: data)
+                    }
+                    .padding(16)
+                    .containerRelativeFrame(.horizontal)
+                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .scrollTargetLayout()
         }
+        .scrollIndicators(.hidden)
+        .scrollTargetBehavior(.paging)
         .task {
             do {
                 await viewModel.fetchData(adm4)

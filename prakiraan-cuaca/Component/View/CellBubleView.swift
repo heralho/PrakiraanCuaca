@@ -21,14 +21,18 @@ struct CellBubleView: View {
                 VStack(alignment: .center) {
                     Text(title)
                         .font(.headline)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(isSelected ? Color.white : Color.black.opacity(0.6))
+                        .fontWeight(isSelected ? .bold : .regular)
+                        .foregroundStyle(Color.black.opacity(0.6))
                 }
                 .padding(16)
-                .background(isSelected ? Color.blueSpray : Color.blueFrenchPass)
-                .cornerRadius(8)
+                .background(Color.white)
+                .overlay(content: {
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.blueFrenchPass, lineWidth: 2)
+                })
             }
-            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 0)
+            .cornerRadius(8)
+            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 0)
             .padding(.horizontal, 4)
             .padding(.vertical, 8)
         }
@@ -38,7 +42,7 @@ struct CellBubleView: View {
 #Preview {
     ScrollView(.horizontal) {
         HStack {
-            CellBubleView(title: "Aceh", id: "1", isSelected: false, action: nil)
+            CellBubleView(title: "Jakarta", id: "1", isSelected: false, action: nil)
         }
     }
 }
