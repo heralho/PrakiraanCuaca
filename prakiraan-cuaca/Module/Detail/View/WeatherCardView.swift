@@ -13,11 +13,15 @@ struct WeatherCardView: View {
         ZStack(alignment: .leading) {
             Color.blueFrenchPass.opacity(0.2)
             VStack(alignment: .leading, spacing: 8) {
-                Text(Date.fromAPI(date: data?.datetime ?? "").toTimeFormat() + " WIB") 
+                Text(Date.fromAPI(date: data?.localDatetime ?? "").toDateFormat())
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Text(Date.fromAPI(date: data?.localDatetime ?? "").toTimeFormat() + " WIB")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                CustomImageView(imageUrl: data?.image)
-                Text(data?.t?.toString() ?? "-" + " °C")
+                //CustomImageView(imageUrl: data?.image)
+                Image(systemName: <#T##String#>)
+                Text((data?.t?.toString() ?? "-") + " °C")
                     .font(.system(size: 64))
                     .fontWeight(.semibold)
                 Text(data?.weatherDescEn ?? "")
@@ -27,23 +31,43 @@ struct WeatherCardView: View {
                 List {
                     HStack(alignment: .center) {
                         Image(systemName: "drop.fill")
-                        Text(data?.hu?.toString() ?? "-")
+                        Spacer()
+                            .background(Color.clear)
+                        Text((data?.hu?.toString() ?? "-") + "%")
                             .frame(alignment: .trailing)
+                    }
+                    .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
+                        return 0
                     }
                     HStack(alignment: .center) {
                         Image(systemName: "wind")
-                        Text(data?.ws?.toString() ?? "-")
+                        Spacer()
+                            .background(Color.clear)
+                        Text((data?.ws?.toString() ?? "-") + "km/h")
                             .frame(alignment: .trailing)
+                    }
+                    .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
+                        return 0
                     }
                     HStack(alignment: .center) {
                         Image(systemName: "safari.fill")
+                        Spacer()
+                            .background(Color.clear)
                         Text(data?.wd ?? "-")
                             .frame(alignment: .trailing)
                     }
+                    .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
+                        return 0
+                    }
                     HStack(alignment: .center) {
                         Image(systemName: "eye.fill")
-                        Text(data?.ws?.toString() ?? "-")
+                        Spacer()
+                            .background(Color.clear)
+                        Text("> " + (data?.ws?.toString() ?? "-") + " km")
                             .frame(alignment: .trailing)
+                    }
+                    .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
+                        return 0
                     }
                 }
                 .listStyle(.plain)
