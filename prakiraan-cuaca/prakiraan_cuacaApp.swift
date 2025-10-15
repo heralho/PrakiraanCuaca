@@ -11,12 +11,13 @@ import SwiftUI
 struct prakiraan_cuacaApp: App {
     let imageCache: IImageCache = ImageCache.shared
     
+    init() {
+        imageCache.initSetup()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear {
-                    imageCache.initSetup()
-                }
         }
     }
 }

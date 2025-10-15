@@ -18,20 +18,25 @@ struct CustomImageView: View {
     @State private var image: UIImage?
     
     var body: some View {
-        if image == nil {
-            ProgressView()
-                .frame(width: width, height: height)
-        }
-        Image(uiImage: image ?? UIImage())
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: width, height: height)
-            .onAppear {
-                fetchImage()
+        Group {
+            if image == nil {
+                ProgressView()
+                    .frame(width: width, height: height)
+            } else {
+                Image(uiImage: image ?? UIImage())
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: width, height: height)
             }
+        }
+        .task {
+            if image == nil {
+                await fetchImage()
+            }
+        }
     }
     
-    private func fetchImage() {
+    private func fetchImage() async {
         guard let imageUrl = imageUrl,
               let url = URL(string: imageUrl) else {
             print("Wrong url format")
@@ -39,7 +44,9 @@ struct CustomImageView: View {
         }
         
         if let image = imageCache.getCache(key: url.absoluteString) {
-            self.image = image
+            await MainActor.run {
+                self.image = image
+            }
         } else {
             Task {
                 do {
@@ -50,7 +57,9 @@ struct CustomImageView: View {
                     
                     let image = svg.rasterize()
                     imageCache.setCache(image: image, key: url.absoluteString)
-                    self.image = image
+                    await MainActor.run {
+                        self.image = image
+                    }
                 }
             }
         }

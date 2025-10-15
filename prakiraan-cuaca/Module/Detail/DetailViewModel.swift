@@ -7,9 +7,9 @@
 
 import Foundation
 
-@MainActor
 protocol DetailViewModelType {
-    
+    func fetchData(_ adm4: String) async
+    func getWeatherData() -> [Weather]
 }
 
 @Observable
@@ -23,7 +23,9 @@ class DetailViewModel: DetailViewModelType {
             let result = try await api.fetchBMKGData(data: BMKGRequestData(adm4: adm4))
             switch result {
             case .success(let success):
-                weatherData = success?.data?.first?.weather ?? []
+                await MainActor.run {
+                    weatherData = success?.data?.first?.weather ?? []
+                }
             case .failure(let failure):
                 print(failure)
             }

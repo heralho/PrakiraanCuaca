@@ -6,7 +6,6 @@
 //
 import SwiftUI
 
-@MainActor
 protocol MainViewModelType {
     var filter: String { get }
     func fetchData() async
@@ -47,7 +46,9 @@ class MainViewModel: MainViewModelType {
             let result = try await api.getProvince()
             switch result {
             case .success(let success):
-                province = success?.data ?? []
+                await MainActor.run {
+                    province = success?.data ?? []
+                }
             case .failure(let failure):
                 print(failure)
             }
@@ -61,7 +62,9 @@ class MainViewModel: MainViewModelType {
             let result = try await api.getCity(data: CityRequestModel(provinceCode: selectedProvince))
             switch result {
             case .success(let success):
-                city = success?.data ?? []
+                await MainActor.run {
+                    city = success?.data ?? []
+                }
             case .failure(let failure):
                 print(failure)
             }
@@ -75,7 +78,9 @@ class MainViewModel: MainViewModelType {
             let result = try await api.getDistrict(data: DistrictRequestModel(cityCode: selectedCity))
             switch result {
             case .success(let success):
-                district = success?.data ?? []
+                await MainActor.run {
+                    district = success?.data ?? []
+                }
             case .failure(let failure):
                 print(failure)
             }
@@ -89,7 +94,9 @@ class MainViewModel: MainViewModelType {
             let result = try await api.getSubdistrict(data: SubdistrictRequestModel(districtCode: selectedDistrict))
             switch result {
             case .success(let success):
-                subdistrict = success?.data ?? []
+                await MainActor.run {
+                    subdistrict = success?.data ?? []
+                }
             case .failure(let failure):
                 print(failure)
             }
