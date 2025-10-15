@@ -19,12 +19,12 @@ struct WeatherCardView: View {
                 Text(Date.fromAPI(date: data?.localDatetime ?? "").toTimeFormat() + " WIB")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                //CustomImageView(imageUrl: data?.image)
-                Image(systemName: <#T##String#>)
+                Spacer(minLength: 8)
+                CustomImageView(imageUrl: data?.image, width: 64, height: 64)
                 Text((data?.t?.toString() ?? "-") + " °C")
-                    .font(.system(size: 64))
-                    .fontWeight(.semibold)
-                Text(data?.weatherDescEn ?? "")
+                    .font(.system(size: 48))
+                    .fontWeight(.bold)
+                Text(data?.weatherDesc ?? "")
                     .font(.title)
                     .fontWeight(.bold)
                 Spacer()
@@ -43,7 +43,7 @@ struct WeatherCardView: View {
                         Image(systemName: "wind")
                         Spacer()
                             .background(Color.clear)
-                        Text((data?.ws?.toString() ?? "-") + "km/h")
+                        Text((data?.ws?.toString() ?? "-") + " km/jam")
                             .frame(alignment: .trailing)
                     }
                     .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
@@ -53,8 +53,12 @@ struct WeatherCardView: View {
                         Image(systemName: "safari.fill")
                         Spacer()
                             .background(Color.clear)
-                        Text(data?.wd ?? "-")
+                        Text(data?.wdToMap ?? "-")
                             .frame(alignment: .trailing)
+                        Image(uiImage: data?.wdToIcon ?? UIImage())
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 10, height: 10)
                     }
                     .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
                         return 0
@@ -63,7 +67,7 @@ struct WeatherCardView: View {
                         Image(systemName: "eye.fill")
                         Spacer()
                             .background(Color.clear)
-                        Text("> " + (data?.ws?.toString() ?? "-") + " km")
+                        Text(data?.vsText ?? "-")
                             .frame(alignment: .trailing)
                     }
                     .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in

@@ -6,18 +6,26 @@
 //
 
 import SwiftUI
+import SwiftDraw
 
 struct CustomImageView: View {
-    let imageCache: IImageCache = ImageCache.shared
+    private let imageCache: IImageCache = ImageCache.shared
     
     let imageUrl: String?
+    var width: CGFloat = 24
+    var height: CGFloat = 24
+    
     @State private var image: UIImage?
     
     var body: some View {
         if image == nil {
             ProgressView()
+                .frame(width: width, height: height)
         }
         Image(uiImage: image ?? UIImage())
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: width, height: height)
             .onAppear {
                 fetchImage()
             }
@@ -36,9 +44,11 @@ struct CustomImageView: View {
             Task {
                 do {
                     let (data, _) = try await URLSession.shared.data(from: url)
-                    guard let image = UIImage(data: data) else {
+                    guard let svg = SVG(data: data) else {
                         return
                     }
+                    
+                    let image = svg.rasterize()
                     imageCache.setCache(image: image, key: url.absoluteString)
                     self.image = image
                 }

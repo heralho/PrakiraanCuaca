@@ -33,6 +33,7 @@
 		8ECF21682E9E3DBB0044369D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF21672E9E3DB80044369D /* ImageCache.swift */; };
 		8ECF216C2E9E45AB0044369D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF216B2E9E45A40044369D /* Date+Extensions.swift */; };
 		8ECF216E2E9E4CB10044369D /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF216D2E9E4CAA0044369D /* Double+Extensions.swift */; };
+		8ECF21722E9F304A0044369D /* SwiftDraw in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECF21712E9F304A0044369D /* SwiftDraw */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECF21722E9F304A0044369D /* SwiftDraw in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +306,7 @@
 			);
 			name = "prakiraan-cuaca";
 			packageProductDependencies = (
+				8ECF21712E9F304A0044369D /* SwiftDraw */,
 			);
 			productName = "prakiraan-cuaca";
 			productReference = 8EDB496B2E98995D001D8733 /* prakiraan-cuaca.app */;
@@ -388,6 +391,7 @@
 			mainGroup = 8EDB49622E98995D001D8733;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				8ECF21702E9F304A0044369D /* XCRemoteSwiftPackageReference "SwiftDraw" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8EDB496C2E98995D001D8733 /* Products */;
@@ -772,6 +776,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8ECF21702E9F304A0044369D /* XCRemoteSwiftPackageReference "SwiftDraw" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swhitty/SwiftDraw";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.25.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8ECF21712E9F304A0044369D /* SwiftDraw */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ECF21702E9F304A0044369D /* XCRemoteSwiftPackageReference "SwiftDraw" */;
+			productName = SwiftDraw;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EDB49632E98995D001D8733 /* Project object */;
 }

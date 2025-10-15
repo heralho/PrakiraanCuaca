@@ -15,12 +15,19 @@ struct DetailView: View {
     var body: some View {
         ScrollView(.horizontal) {
             LazyHStack(spacing: .zero) {
-                ForEach(viewModel.getWeatherData(), id: \.datetime) { data in
-                    VStack {
-                        WeatherCardView(data: data)
+                if viewModel.getWeatherData().isEmpty {
+                    ProgressView()
+                        .containerRelativeFrame(.horizontal)
+                        .transition(AnyTransition.opacity.animation(.linear(duration: 0.2)))
+                } else {
+                    ForEach(viewModel.getWeatherData(), id: \.datetime) { data in
+                        VStack {
+                            WeatherCardView(data: data)
+                        }
+                        .padding(16)
+                        .containerRelativeFrame(.horizontal)
                     }
-                    .padding(16)
-                    .containerRelativeFrame(.horizontal)
+                    .transition(AnyTransition.opacity.animation(.linear(duration: 0.2)))
                 }
             }
             .scrollTargetLayout()

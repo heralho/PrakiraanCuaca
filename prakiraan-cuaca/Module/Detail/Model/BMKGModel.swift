@@ -5,6 +5,8 @@
 //  Created by Heraldy Dwifany on 10/10/25.
 //
 
+import SwiftUI
+
 struct BMKGRequestData: Codable {
     let adm4: String
 }
@@ -48,6 +50,52 @@ struct Weather: Codable {
     let image: String?
     let utcDatetime: String?
     let localDatetime: String?
+    
+    var wdToMap: String {
+        switch wdTo {
+        case "N":
+            return "Utara"
+        case "S":
+            return "Selatan"
+        case "E":
+            return "Timur"
+        case "W":
+            return "Barat"
+        case "NE":
+            return "Timur Laut"
+        case "NW":
+            return "Barat Laut"
+        case "SE":
+            return "Tenggara"
+        case "SW":
+            return "Barat Daya"
+        default:
+            return "-"
+        }
+    }
+    
+    var wdToIcon: UIImage? {
+        switch wdTo {
+        case "N":
+            return UIImage(systemName: "arrow.up")
+        case "S":
+            return UIImage(systemName: "arrow.down")
+        case "E":
+            return UIImage(systemName: "arrow.right")
+        case "W":
+            return UIImage(systemName: "arrow.left")
+        case "NE":
+            return UIImage(systemName: "arrow.up.right")
+        case "NW":
+            return UIImage(systemName: "arrow.up.left")
+        case "SE":
+            return UIImage(systemName: "arrow.down.right")
+        case "SW":
+            return UIImage(systemName: "arrow.down.left")
+        default:
+            return nil
+        }
+    }
 
     enum CodingKeys: String, CodingKey {
         case datetime, t, tcc, tp, weather

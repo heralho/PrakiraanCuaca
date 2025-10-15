@@ -13,12 +13,16 @@ extension Double? {
             return "-"
         }
         
-        return String(format: "%.1f", value)
+        let str = String(format: "%.1f", value)
+        let strArr = str.split(separator: ".")
+        return strArr.last == "0" ? String(strArr[0]) : str
     }
 }
 
 extension Double {
     func toString() -> String {
-        return String(format: "%.1f", self)
+        let str = String(format: "%.1f", self)
+        let strArr = str.split(separator: ".")
+        return strArr.last == "0" ? String(strArr[0]) : str
     }
 }
