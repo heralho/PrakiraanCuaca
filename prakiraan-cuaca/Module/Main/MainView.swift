@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var navigator: Navigator
-    @State private var viewModel: MainViewModel = MainViewModel()
+    @State private var viewModel: MainViewModelType = MainViewModel()
     
     var body: some View {
         ScrollView(.vertical) {

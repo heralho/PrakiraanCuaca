@@ -7,7 +7,7 @@
 import SwiftUI
 
 protocol MainViewModelType {
-    var filter: String { get }
+    var filter: String { get set }
     func fetchData() async
     func setSelectedProvince(_ province: String) async
     func setSelectedCity(_ city: String) async

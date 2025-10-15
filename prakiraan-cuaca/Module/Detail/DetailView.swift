@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     let adm4: String
     
-    @State private var viewModel: DetailViewModel = DetailViewModel()
+    @State private var viewModel: DetailViewModelType = DetailViewModel()
     
     var body: some View {
         ScrollView(.horizontal) {
